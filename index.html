@@ -1,69 +1,276 @@
-import { useState } from "react";
-import { ArrowRight, Instagram, ShoppingBag, Banknote, Info, CheckCircle2, Phone } from "lucide-react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TaraJusLigo — Support Tara</title>
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Optional: smooth scroll */
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="min-h-screen bg-[#0f0f10] text-zinc-100">
+  <!-- Top Nav -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-black/60 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+      <a href="#top" class="flex items-center gap-3">
+        <div class="h-9 w-9 rounded-xl bg-gradient-to-br from-amber-400 to-yellow-600 shadow-inner"></div>
+        <span class="text-sm font-extrabold tracking-wider text-white">TARA<span class="text-amber-400">JUS</span>LIGO</span>
+      </a>
+      <nav class="hidden items-center gap-6 text-sm sm:flex">
+        <a class="hover:text-amber-300" href="#support">Support</a>
+        <a class="hover:text-amber-300" href="#shop">Shop</a>
+        <a class="hover:text-amber-300" href="#about">About</a>
+        <a class="hover:text-amber-300" href="#capabilities">Capabilities</a>
+        <a class="hover:text-amber-300" href="#faq">FAQ</a>
+        <a class="hover:text-amber-300" href="#contact">Contact</a>
+      </nav>
+      <a href="https://www.instagram.com/TaraJusLigo" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-xl border border-amber-400/30 bg-white/5 px-3 py-2 text-xs font-semibold text-white hover:bg-white/10">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="IG" class="h-4 w-4" />
+        @TaraJusLigo
+        <svg class="ml-1 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg>
+      </a>
+    </div>
+  </header>
 
-export default function HomePage() {
-  const [email, setEmail] = useState("");
+  <!-- Hero -->
+  <section id="top" class="relative overflow-hidden">
+    <div class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:px-8">
+      <div>
+        <div class="mb-4 inline-flex items-center gap-1 rounded-full border border-amber-400/40 bg-amber-400/10 px-3 py-1 text-xs font-semibold tracking-wide text-amber-300">Tara • @TaraJusLigo</div>
+        <h1 class="mb-4 text-4xl font-extrabold leading-tight text-white sm:text-5xl">
+          Support Tara — <span class="text-amber-400">Get a Free Grinder</span>
+        </h1>
+        <p class="mb-6 max-w-xl text-zinc-300">
+          I’m Shatara — most call me <strong>Tara</strong>. I turned pressure into progress: building my online store and sharing life with vitiligo proudly.
+          You can support by:
+        </p>
+        <ul class="mb-8 list-disc space-y-1 pl-6 text-sm text-zinc-200">
+          <li>Buying a grinder for <strong>$25</strong></li>
+          <li>Signing up for the SoFi banking app and doing a one‑time <strong>$50</strong> deposit to get a free grinder (send me a screenshot)</li>
+        </ul>
+        <div class="flex flex-wrap items-center gap-3">
+          <a href="#support" class="inline-flex items-center justify-center rounded-2xl border border-rose-400/30 bg-rose-500/90 px-5 py-3 text-sm font-semibold text-black shadow-[0_8px_24px_rgba(244,63,94,0.35)] transition hover:bg-rose-400 hover:shadow-[0_10px_28px_rgba(244,63,94,0.5)] focus:outline-none focus:ring-2 focus:ring-rose-300">Support</a>
+          <a href="#shop" class="inline-flex items-center justify-center rounded-2xl border border-white/20 bg-white/5 px-5 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/30">Buy a Grinder ($25)</a>
+        </div>
+        <div class="mt-6 text-xs text-zinc-400">Dark • Gold • Coral vibe</div>
+      </div>
+      <div class="relative">
+        <div class="aspect-[4/5] w-full overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-zinc-900 to-black shadow-2xl">
+          <img src="/tara-hero.jpg" alt="Tara portrait" class="h-full w-full object-cover opacity-90" />
+        </div>
+        <div class="pointer-events-none absolute -bottom-8 -left-8 h-40 w-40 rounded-full bg-amber-400/20 blur-2xl"></div>
+        <div class="pointer-events-none absolute -top-10 -right-10 h-48 w-48 rounded-full bg-yellow-600/20 blur-2xl"></div>
+      </div>
+    </div>
+  </section>
 
-  const LINKS = {
-    support: "https://www.tarajusligo.com/support",
-    landing: "https://www.tarajusligo.com/landing-page",
-    ebay: "https://www.ebay.com/str/wer3d",
-    instagram: "https://www.instagram.com/TaraJusLigo/",
-  };
+  <!-- Support Paths -->
+  <section id="support" class="relative mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="mb-3 inline-flex items-center gap-1 rounded-full border border-amber-400/40 bg-amber-400/10 px-3 py-1 text-xs font-semibold tracking-wide text-amber-300">Support the Movement</div>
+    <h2 class="mb-6 text-2xl font-bold tracking-tight text-white sm:text-3xl">Two easy ways to support Tara</h2>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <!-- SoFi Route -->
+      <div class="relative rounded-3xl border border-amber-400/20 bg-white/5 p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
+        <div class="mb-2 inline-flex items-center gap-1 rounded-full border border-amber-400/40 bg-amber-400/10 px-3 py-1 text-xs font-semibold tracking-wide text-amber-300">Bonus + Free Grinder</div>
+        <h3 class="mb-2 text-lg font-bold text-white">Support via SoFi</h3>
+        <p class="mb-4 text-sm text-zinc-300">Download the app with my link, make a one‑time $50 deposit, and send me a quick screenshot. You’ll unlock a bonus and I’ll send you an Oreo‑style grinder — on me.</p>
+        <ol class="mb-5 list-decimal space-y-2 pl-6 text-sm text-zinc-200">
+          <li>Tap the button below and grab the app</li>
+          <li>Deposit $50 one time (it’s your money)</li>
+          <li>DM or email me a screenshot</li>
+          <li>Claim your <span class="font-semibold text-amber-300">free grinder</span> (while supplies last)</li>
+        </ol>
+        <div class="flex flex-wrap gap-3">
+          <a href="#" class="inline-flex items-center justify-center rounded-2xl border border-rose-400/30 bg-rose-500/90 px-5 py-3 text-sm font-semibold text-black shadow-[0_8px_24px_rgba(244,63,94,0.35)] transition hover:bg-rose-400 hover:shadow-[0_10px_28px_rgba(244,63,94,0.5)] focus:outline-none focus:ring-2 focus:ring-rose-300">Get the App</a>
+          <a href="/landing-page" class="inline-flex items-center justify-center rounded-2xl border border-white/20 bg-white/5 px-5 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/30">How it works</a>
+        </div>
+        <p class="mt-3 text-xs text-zinc-400">* No sensitive info shared — just a simple confirmation screenshot.</p>
+      </div>
 
-  return (
-    <main className="min-h-screen bg-[#1d1d1f] text-white">
-      {/* Top Bar */}
-      <header className="sticky top-0 z-40 backdrop-blur bg-[#0f0f0f]/80 border-b border-[#ffb703]/20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
-          <a href="#top" className="text-lg font-semibold tracking-tight">
-            <span className="text-[#ffb703]">Tara</span>Jus<span className="text-[#fb8500]">Ligo</span>
+      <!-- eBay Route -->
+      <div class="relative rounded-3xl border border-white/10 bg-white/5 p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
+        <div class="mb-2 inline-flex items-center gap-1 rounded-full border border-amber-400/40 bg-amber-400/10 px-3 py-1 text-xs font-semibold tracking-wide text-amber-300">Fastest Way</div>
+        <h3 class="mb-2 text-lg font-bold text-white">Buy the Oreo‑Style Grinder</h3>
+        <p class="mb-4 text-sm text-zinc-300">Prefer to keep it simple? Cop the grinder right now from my eBay store. Fun, functional, and supports the brand.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="https://www.ebay.com/str/wer3d" target="_blank" class="inline-flex items-center justify-center rounded-2xl border border-rose-400/30 bg-rose-500/90 px-5 py-3 text-sm font-semibold text-black shadow-[0_8px_24px_rgba(244,63,94,0.35)] transition hover:bg-rose-400 hover:shadow-[0_10px_28px_rgba(244,63,94,0.5)] focus:outline-none focus:ring-2 focus:ring-rose-300">Shop on eBay
+            <svg class="ml-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg>
           </a>
-          <nav className="hidden md:flex gap-6 text-sm text-white/80">
-            <a className="hover:text-[#fb8500]" href="#support">Support</a>
-            <a className="hover:text-[#fb8500]" href="#shop">Shop</a>
-            <a className="hover:text-[#fb8500]" href="#about">About</a>
-            <a className="hover:text-[#fb8500]" href="#experience">Experience</a>
-            <a className="hover:text-[#fb8500]" href="#faq">FAQ</a>
-            <a className="hover:text-[#fb8500]" href="#contact">Contact</a>
-          </nav>
-          <div className="flex items-center gap-3">
-            <a
-              href={LINKS.instagram}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl border border-[#fb8500]/30 px-3 py-1.5 text-sm hover:bg-[#fb8500]/10 transition"
-            >
-              <Instagram className="w-4 h-4" /> @TaraJusLigo
+          <a href="#shop" class="inline-flex items-center justify-center rounded-2xl border border-white/20 bg-white/5 px-5 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/30">See Details</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop Preview -->
+  <section id="shop" class="relative mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="mb-3 inline-flex items-center gap-1 rounded-full border border-amber-400/40 bg-amber-400/10 px-3 py-1 text-xs font-semibold tracking-wide text-amber-300">Featured Product</div>
+    <h2 class="mb-6 text-2xl font-bold tracking-tight text-white sm:text-3xl">Oreo‑Style Herb Grinder</h2>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div class="rounded-3xl border border-white/10 bg-gradient-to-br from-zinc-900 to-black p-6">
+        <div class="mb-4 aspect-square w-full overflow-hidden rounded-2xl border border-white/10 bg-zinc-950">
+          <img src="/oreo-grinder.jpg" alt="Oreo-style grinder" class="h-full w-full object-cover" />
+        </div>
+        <div class="flex items-center justify-between">
+          <div>
+            <h4 class="text-lg font-bold text-white">Oreo‑Style Grinder</h4>
+            <p class="text-xs text-zinc-400">Colors: Double Stuff, White, Orange Cream, Orange, Mint, Chocolate, Green, Red Velvet Red</p>
+          </div>
+          <a href="https://www.ebay.com/str/wer3d" target="_blank" class="inline-flex items-center justify-center rounded-2xl border border-rose-400/30 bg-rose-500/90 px-4 py-2 text-sm font-semibold text-black hover:bg-rose-400">Buy on eBay</a>
+        </div>
+      </div>
+      <ul class="space-y-3 text-sm text-zinc-200">
+        <li class="rounded-xl border border-white/10 bg-white/5 p-4">Looks like a classic sandwich cookie — twist to reveal precision teeth</li>
+        <li class="rounded-xl border border-white/10 bg-white/5 p-4">Magnetic lid for a secure fit</li>
+        <li class="rounded-xl border border-white/10 bg-white/5 p-4">Smooth, consistent grind with twin‑tooth interior</li>
+        <li class="rounded-xl border border-white/10 bg-white/5 p-4">Compact, portable, and easy to clean</li>
+        <li class="rounded-xl border border-white/10 bg-white/5 p-4">Great gift — fun and functional</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="relative mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="mb-3 inline-flex items-center gap-1 rounded-full border border-amber-400/40 bg-amber-400/10 px-3 py-1 text-xs font-semibold tracking-wide text-amber-300">About Tara</div>
+    <h2 class="mb-6 text-2xl font-bold tracking-tight text-white sm:text-3xl">Organized. Proactive. Team‑first.</h2>
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+      <div class="md:col-span-2">
+        <p class="mb-4 text-zinc-300">Hardworking and reliable with a strong background in customer service, front desk, auditing, call support, warehouse coordination, and housekeeping. I’m highly organized, proactive, and punctual — with a calm, people‑first presence. I make guests feel welcome, operations run smooth, and goals feel easy.</p>
+        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+          <div class="rounded-xl border border-white/10 bg-white/5 p-3 text-sm text-zinc-200">Customer Service & Front Desk</div>
+          <div class="rounded-xl border border-white/10 bg-white/5 p-3 text-sm text-zinc-200">Night Auditing & Admin Support</div>
+          <div class="rounded-xl border border-white/10 bg-white/5 p-3 text-sm text-zinc-200">Call Center & Data Entry</div>
+          <div class="rounded-xl border border-white/10 bg-white/5 p-3 text-sm text-zinc-200">Warehouse Coordination</div>
+          <div class="rounded-xl border border-white/10 bg-white/5 p-3 text-sm text-zinc-200">Housekeeping & Maintenance</div>
+          <div class="rounded-xl border border-white/10 bg-white/5 p-3 text-sm text-zinc-200">Time Management & Organization</div>
+        </div>
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-zinc-900/50 p-4">
+        <h4 class="mb-2 font-semibold text-white">Quick Facts</h4>
+        <ul class="space-y-2 text-sm text-zinc-300">
+          <li>Based in Las Vegas, NV</li>
+          <li>Business Admin (B.A.), Post University</li>
+          <li>Team‑oriented with leadership experience</li>
+          <li>Always on time, always accountable</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capabilities (Website‑style, not resume) -->
+  <section id="capabilities" class="relative mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="mb-3 inline-flex items-center gap-1 rounded-full border border-amber-400/40 bg-amber-400/10 px-3 py-1 text-xs font-semibold tracking-wide text-amber-300">Capabilities</div>
+    <h2 class="mb-6 text-2xl font-bold tracking-tight text-white sm:text-3xl">What I bring</h2>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:bg-white/10">
+        <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-amber-400/15 text-amber-300">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <h4 class="mb-2 text-base font-bold text-white">Hospitality Energy</h4>
+        <p class="text-sm text-zinc-300">Warm welcomes, smooth check‑ins, and a calm presence that keeps the vibe right.</p>
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:bg-white/10">
+        <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-amber-400/15 text-amber-300">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 8a6 6 0 0 0-9 0l0 0a6 6 0 0 0-9 8l9 7 9-7a6 6 0 0 0 0-8z"/></svg>
+        </div>
+        <h4 class="mb-2 text-base font-bold text-white">Support & Care</h4>
+        <p class="text-sm text-zinc-300">Clear communication, fast responses, and real empathy on calls and DMs.</p>
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:bg-white/10">
+        <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-amber-400/15 text-amber-300">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l0 0a2 2 0 1 1-2.83 2.83l0 0A1.65 1.65 0 0 0 15 19.4"/><path d="M4.6 9a1.65 1.65 0 0 0-.33-1.82l0 0A2 2 0 1 1 7.1 4.35l0 0A1.65 1.65 0 0 0 9 4.6"/></svg>
+        </div>
+        <h4 class="mb-2 text-base font-bold text-white">Operations & Flow</h4>
+        <p class="text-sm text-zinc-300">Organized, on‑time, and detail‑driven — because good systems make magic easy.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="relative mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="mb-3 inline-flex items-center gap-1 rounded-full border border-amber-400/40 bg-amber-400/10 px-3 py-1 text-xs font-semibold tracking-wide text-amber-300">Good to know</div>
+    <h2 class="mb-6 text-2xl font-bold tracking-tight text-white sm:text-3xl">FAQ</h2>
+    <div class="divide-y divide-white/10 overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+      <details class="p-5 group" open>
+        <summary class="flex cursor-pointer list-none items-center justify-between text-left text-sm font-semibold text-white">
+          <span>What does "Support via SoFi" mean?</span>
+          <span class="ml-4 text-xl text-amber-300">+</span>
+        </summary>
+        <p class="mt-3 text-sm text-zinc-300">Download the SoFi banking app using Tara's referral link, complete a one‑time $50 deposit, and you’ll help her mission while unlocking a bonus.</p>
+      </details>
+      <details class="p-5 group">
+        <summary class="flex cursor-pointer list-none items-center justify-between text-left text-sm font-semibold text-white">
+          <span>Do I really get a free grinder?</span>
+          <span class="ml-4 text-xl text-amber-300">+</span>
+        </summary>
+        <p class="mt-3 text-sm text-zinc-300">Yes — send Tara a screenshot confirming your SoFi deposit and she’ll hook you up with an Oreo‑style grinder (while supplies last).</p>
+      </details>
+      <details class="p-5 group">
+        <summary class="flex cursor-pointer list-none items-center justify-between text-left text-sm font-semibold text-white">
+          <span>I don’t want to use the app — how else can I support?</span>
+          <span class="ml-4 text-xl text-amber-300">+</span>
+        </summary>
+        <p class="mt-3 text-sm text-zinc-300">Grab the Oreo‑style grinder from the eBay store. It’s a fun, functional pickup and directly supports Tara.</p>
+      </details>
+      <details class="p-5 group">
+        <summary class="flex cursor-pointer list-none items-center justify-between text-left text-sm font-semibold text-white">
+          <span>Is my info safe?</span>
+          <span class="ml-4 text-xl text-amber-300">+</span>
+        </summary>
+        <p class="mt-3 text-sm text-zinc-300">All banking details stay between you and the app. Tara only needs a simple screenshot to confirm support — no sensitive data.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="relative mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="mb-3 inline-flex items-center gap-1 rounded-full border border-amber-400/40 bg-amber-400/10 px-3 py-1 text-xs font-semibold tracking-wide text-amber-300">Stay in touch</div>
+    <h2 class="mb-6 text-2xl font-bold tracking-tight text-white sm:text-3xl">Let’s connect</h2>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+      <div class="md:col-span-2">
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h4 class="mb-3 font-semibold text-white">DM or Email</h4>
+          <p class="mb-4 text-sm text-zinc-300">Questions about support, orders, or collabs? Slide into my DMs on Instagram or send an email.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://www.instagram.com/TaraJusLigo" target="_blank" class="inline-flex items-center justify-center rounded-2xl border border-rose-400/30 bg-rose-500/90 px-5 py-3 text-sm font-semibold text-black hover:bg-rose-400">DM on Instagram
+              <svg class="ml-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg>
             </a>
+            <a href="mailto:hello@tarajusligo.com" class="inline-flex items-center justify-center rounded-2xl border border-white/20 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10">Email Tara</a>
           </div>
         </div>
-      </header>
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-amber-500/10 to-yellow-600/10 p-6">
+        <h4 class="mb-3 font-semibold text-white">Quick Links</h4>
+        <ul class="space-y-2 text-sm text-amber-300">
+          <li><a href="#support" class="hover:underline">How to Support</a></li>
+          <li><a href="#shop" class="hover:underline">Oreo‑Style Grinder</a></li>
+          <li><a href="#faq" class="hover:underline">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-      {/* Hero */}
-      <section id="top" className="relative overflow-hidden bg-[#1d1d1f]">
-        <div className="absolute inset-0 -z-10 opacity-30 bg-[radial-gradient(circle_at_top,rgba(251,133,0,0.25),transparent_50%),radial-gradient(circle_at_bottom_right,rgba(255,183,3,0.25),transparent_40%)]" />
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-              Shatara (Tara) — <span className="text-[#ffb703]">Service-Driven</span> |
-              <span className="text-[#fb8500]"> Organized</span> | Reliable
-            </h1>
-            <p className="mt-5 text-white/80 max-w-xl">
-              Hardworking professional with customer service, front desk, call center, and warehouse supervision experience.
-              Based in Las Vegas, focused on building community and value—one great guest experience and one happy customer at a time.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-3">
-              <a
-                href={LINKS.support}
-                className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-[#fb8500] px-5 py-3 font-semibold hover:bg-[#ffb703] transition shadow-lg shadow-[#fb8500]/20"
-              >
-                <Banknote className="w-5 h-5" /> Support via SoFi (How-To)
-                <ArrowRight className="w-4 h-4 translate-x-0 group-hover:translate-x-0.5 transition" />
-              </a>
-              <a
-                href={LINKS.ebay}
-                className="inline-flex items-center justify-center gap-2 rounded-2xl border border-[#fb8500]/30 px-5 py-3 font-semibold hover:bg-[#fb8500]/10 transition"
+  <!-- Footer -->
+  <footer class="mt-8 border-t border-white/10 bg-black/40">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-8 text-xs text-zinc-400 sm:flex-row sm:px-6 lg:px-8">
+      <div>© <span id="year"></span> TaraJusLigo. All rights reserved.</div>
+      <div class="flex items-center gap-4">
+        <a href="https://www.instagram.com/TaraJusLigo" class="hover:text-amber-300">Instagram</a>
+        <a href="https://www.ebay.com/str/wer3d" class="hover:text-amber-300">eBay Store</a>
+        <a href="/landing-page" class="hover:text-amber-300">Support Page</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
               >
                 <ShoppingBag className="w-5 h-5" /> Buy the Oreo-Style Grinder
               </a>
